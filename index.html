@@ -1,0 +1,245 @@
+import { Button } from "@/components/ui/button";
+import FaceShapeCard from "@/components/FaceShapeCard";
+import { ExternalLink } from "lucide-react";
+
+const Index = () => {
+  const faceShapes = [
+    {
+      title: "Rosto Oval",
+      description: "O formato oval é considerado o mais equilibrado de todos. A testa é ligeiramente mais larga que o queixo, e o comprimento do rosto é aproximadamente uma vez e meia a largura.",
+      characteristics: [
+        "Testa ligeiramente mais larga que o queixo",
+        "Maçãs do rosto proeminentes",
+        "Queixo arredondado",
+        "Proporções equilibradas"
+      ]
+    },
+    {
+      title: "Rosto Redondo",
+      description: "Um rosto redondo tem comprimento e largura quase iguais, com linhas suaves e curvas. As bochechas são geralmente as partes mais largas do rosto.",
+      characteristics: [
+        "Comprimento e largura similares",
+        "Bochechas cheias e proeminentes",
+        "Linha do maxilar suave",
+        "Queixo arredondado"
+      ]
+    },
+    {
+      title: "Rosto Quadrado",
+      description: "Caracterizado por uma mandíbula forte e angular. A testa, as bochechas e a mandíbula têm aproximadamente a mesma largura.",
+      characteristics: [
+        "Mandíbula angular e proeminente",
+        "Testa larga",
+        "Largura consistente ao longo do rosto",
+        "Queixo quadrado"
+      ]
+    },
+    {
+      title: "Rosto Coração",
+      description: "Este formato apresenta uma testa larga, maçãs do rosto proeminentes e um queixo delicado e pontudo. A largura diminui gradualmente da testa ao queixo.",
+      characteristics: [
+        "Testa larga",
+        "Maçãs do rosto proeminentes",
+        "Queixo pontudo e estreito",
+        "Linha do cabelo em formato de coração"
+      ]
+    },
+    {
+      title: "Rosto Diamante",
+      description: "O formato diamante é caracterizado por maçãs do rosto largas e proeminentes, com testa e queixo estreitos. É o formato mais raro.",
+      characteristics: [
+        "Maçãs do rosto muito proeminentes",
+        "Testa estreita",
+        "Queixo pontudo",
+        "Largura maior no meio do rosto"
+      ]
+    },
+    {
+      title: "Rosto Oblongo",
+      description: "Também chamado de retangular, este formato é mais longo do que largo, com testa, bochechas e mandíbula de largura similar.",
+      characteristics: [
+        "Comprimento maior que a largura",
+        "Testa alta",
+        "Queixo alongado",
+        "Proporções verticais acentuadas"
+      ]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Hero Section */}
+      <header className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[var(--gradient-hero)]" />
+        <div className="container mx-auto px-4 py-20 md:py-28 relative">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
+              Descubra o Formato do{" "}
+              <span className="bg-[var(--gradient-primary)] bg-clip-text text-transparent">
+                Seu Rosto
+              </span>
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Use nossa ferramenta avançada para identificar seu formato facial e receber dicas personalizadas de beleza e estilo
+            </p>
+            <div className="pt-4">
+              <Button 
+                size="lg" 
+                className="text-lg px-8 py-6 bg-[var(--gradient-primary)] hover:opacity-90 transition-[var(--transition-smooth)] shadow-[var(--shadow-soft)]"
+                asChild
+              >
+                <a 
+                  href="https://whatismyfaceshape.net/pt/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  Iniciar Detector
+                  <ExternalLink className="w-5 h-5" />
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Article Content */}
+      <main className="container mx-auto px-4 py-16 md:py-24">
+        <article className="max-w-4xl mx-auto space-y-12">
+          {/* Introduction */}
+          <section className="space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              Guia Completo dos Formatos de Rosto
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Conhecer o formato do seu rosto é essencial para escolher os melhores cortes de cabelo, óculos, brincos e até maquiagem. Cada formato tem suas características únicas e beleza própria. Neste guia completo, vamos explorar os seis principais formatos de rosto e como identificá-los.
+            </p>
+          </section>
+
+          {/* How to Measure */}
+          <section className="bg-accent/50 rounded-2xl p-8 space-y-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+              Como Medir Seu Rosto
+            </h2>
+            <div className="space-y-3 text-muted-foreground leading-relaxed">
+              <p>Para determinar corretamente o formato do seu rosto, siga estas etapas:</p>
+              <ol className="list-decimal list-inside space-y-2 ml-4">
+                <li>Meça a largura da sua testa na parte mais larga</li>
+                <li>Meça a largura das suas maçãs do rosto</li>
+                <li>Meça a largura da sua mandíbula</li>
+                <li>Meça o comprimento do seu rosto da testa ao queixo</li>
+              </ol>
+              <p className="pt-2">
+                Compare estas medidas para identificar qual formato melhor descreve seu rosto. Nossa ferramenta online pode fazer isso automaticamente para você!
+              </p>
+            </div>
+          </section>
+
+          {/* Face Shapes Grid */}
+          <section className="space-y-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
+              Os 6 Formatos de Rosto
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {faceShapes.map((shape, index) => (
+                <FaceShapeCard key={index} {...shape} />
+              ))}
+            </div>
+          </section>
+
+          {/* Tips Section */}
+          <section className="space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              Dicas para Cada Formato
+            </h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Cada formato de rosto tem suas próprias características que podem ser realçadas com as escolhas certas de estilo. Por exemplo, rostos ovais são versáteis e combinam com praticamente qualquer estilo, enquanto rostos redondos ficam melhor com penteados que adicionam altura e volume no topo.
+              </p>
+              <p>
+                Rostos quadrados podem suavizar suas linhas angulares com cachos e ondas, enquanto rostos em formato de coração ficam incríveis com franjas laterais. Rostos diamante beneficiam-se de penteados com volume nas laterais, e rostos oblongos ficam ótimos com cortes de comprimento médio que adicionam largura.
+              </p>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="bg-[var(--gradient-hero)] rounded-2xl p-8 md:p-12 text-center space-y-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+              Pronto para Descobrir Seu Formato?
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Use nossa ferramenta gratuita de detecção de formato de rosto e receba análises instantâneas com recomendações personalizadas.
+            </p>
+            <Button 
+              size="lg" 
+              className="text-lg px-8 py-6 bg-[var(--gradient-primary)] hover:opacity-90 transition-[var(--transition-smooth)] shadow-[var(--shadow-soft)]"
+              asChild
+            >
+              <a 
+                href="https://whatismyfaceshape.net/pt/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                Descobrir Meu Formato
+                <ExternalLink className="w-5 h-5" />
+              </a>
+            </Button>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              Perguntas Frequentes
+            </h2>
+            <div className="space-y-6">
+              <div className="space-y-2">
+                <h3 className="text-xl font-semibold text-foreground">
+                  Qual é o formato de rosto mais comum?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  O formato oval é considerado um dos mais comuns e é frequentemente chamado de formato "ideal" devido às suas proporções equilibradas. No entanto, cada formato tem sua própria beleza única.
+                </p>
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-xl font-semibold text-foreground">
+                  Meu formato de rosto pode mudar com o tempo?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Sim, mudanças no peso, envelhecimento e até hormônios podem afetar ligeiramente o formato do seu rosto. No entanto, a estrutura óssea básica permanece a mesma.
+                </p>
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-xl font-semibold text-foreground">
+                  Como posso ter certeza do meu formato de rosto?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  A melhor maneira é usar uma ferramenta de detecção profissional como a nossa, que analisa suas características faciais com precisão. Você também pode tirar uma foto de frente e traçar o contorno do seu rosto para visualizar melhor o formato.
+                </p>
+              </div>
+            </div>
+          </section>
+        </article>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-muted py-8 mt-16">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-muted-foreground">
+            © 2024 Detector de Formato de Rosto. Use nossa ferramenta em{" "}
+            <a 
+              href="https://whatismyfaceshape.net/pt/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-medium"
+            >
+              whatismyfaceshape.net/pt
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Index;
